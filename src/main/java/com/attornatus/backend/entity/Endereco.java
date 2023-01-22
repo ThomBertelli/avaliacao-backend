@@ -11,7 +11,6 @@ import java.util.Objects;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@RequiredArgsConstructor
 @Entity
 
 public class Endereco {
