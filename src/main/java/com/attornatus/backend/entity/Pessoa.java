@@ -1,16 +1,14 @@
 package com.attornatus.backend.entity;
 
 import lombok.*;
+import org.hibernate.Hibernate;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 
-
-@Data
+@ToString
+@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -28,6 +26,7 @@ public class Pessoa {
     private Date dataNascimento;
 
     @OneToMany
+    @ToString.Exclude
     private List<Endereco> enderecos = new ArrayList<>();
 
     @OneToOne(cascade = CascadeType.ALL)
@@ -48,5 +47,16 @@ public class Pessoa {
         }
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        Pessoa pessoa = (Pessoa) o;
+        return id != null && Objects.equals(id, pessoa.id);
+    }
 
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }
