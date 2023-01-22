@@ -40,4 +40,5 @@ Uma Pessoa deve ter os seguintes campos:
   * Cidade
   
 
-
+#### A API está documentada com Swagger.
+`http://localhost:8080/swagger-ui/index.htm`
