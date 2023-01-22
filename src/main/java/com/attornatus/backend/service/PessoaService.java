@@ -1,7 +1,11 @@
 package com.attornatus.backend.service;
 
 
+import com.attornatus.backend.entity.Pessoa;
 import com.attornatus.backend.entity.dto.PessoaRequestDTO;
+import com.attornatus.backend.entity.dto.PessoaResponseDTO;
+import com.attornatus.backend.exception.CadastroInvalidoException;
+import com.attornatus.backend.exception.handlers.ResourceNotFoundException;
 import com.attornatus.backend.repository.PessoaRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 @Service
