@@ -4,19 +4,19 @@
 
 Usando Spring boot, crie uma API simples para gerenciar Pessoas. Esta API deve permitir:
 * Criar uma pessoa <br/>
-  &check; Criado método POST.
+  &check; Criado service salvar (POST).
 
 
 * Editar uma pessoa<br/>
-  &check; Criado método PATCH.
+  &check; Criado service editar (PATCH).
 
 
 * Consultar uma pessoa<br/>
-  &check; Criado método GET com parametro numeroCadastro.
+  &check; Criado service buscaPorNumeroCadastro (GET com parametro).
 
 
 * Listar pessoas<br/>
-  &check; Criado método GET sem parametro lista todas as pessoas.
+  &check; Criado service listarPessoas (GET sem parametro).
 
 
 * Criar endereço para pessoa<br/>
